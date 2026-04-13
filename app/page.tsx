@@ -1,64 +1,116 @@
-import Image from "next/image";
+import React from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="w-full bg-white text-black font-sans selection:bg-black selection:text-white">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 w-full p-6 md:p-10 flex justify-between items-center z-50 bg-white/90 backdrop-blur-sm border-b-2 border-black">
+        <Link href="/" className="text-xl font-bold tracking-tighter uppercase transition-opacity hover:opacity-70">
+          B&amp;W Studio
+        </Link>
+        <div className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest">
+          <Link href="#services" className="link-underline">Services</Link>
+          <Link href="#about" className="link-underline">About</Link>
+          <Link href="#contact" className="link-underline">Contact</Link>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        <button className="md:hidden text-sm font-bold uppercase tracking-widest">Menu</button>
+      </nav>
+
+      <main className="pt-32">
+        {/* Hero Section */}
+        <section className="px-6 md:px-10 min-h-[80vh] flex flex-col justify-center">
+          <div className="max-w-7xl mx-auto w-full">
+            <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-black uppercase leading-[0.85] tracking-tighter fade-in-up">
+              We engineer<br />
+              <span className="text-transparent" style={{ WebkitTextStroke: '2px black' }}>attention.</span>
+            </h1>
+            <p className="mt-10 text-xl md:text-3xl max-w-3xl font-medium fade-in-up delay-100">
+              Not just another marketing agency. We build digital dominance through stark contrasts, brutal honesty, and calculated execution.
+            </p>
+            <div className="mt-16 fade-in-up delay-200">
+               <Link href="#contact" className="inline-flex items-center justify-center px-10 py-5 bg-black text-white font-bold uppercase tracking-widest hover-invert border-brutal transition-all text-lg">
+                Dominate your market
+               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section id="services" className="border-t-2 border-black border-brutal border-l-0 border-r-0 border-b-0 mt-12 md:mt-0">
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y-2 md:divide-y-0 md:divide-x-2 divide-black">
+            
+            {/* Service 1 */}
+            <div className="p-10 md:p-16 hover-invert group flex flex-col justify-between min-h-[450px]">
+              <div>
+                <h3 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6">01<br/>Strategy</h3>
+                <p className="text-lg md:text-xl font-medium opacity-90 group-hover:opacity-100 leading-relaxed">
+                  Data-driven market positioning that annihilates competition. No fluff, just pure analytical execution.
+                </p>
+              </div>
+              <div className="mt-12">
+                <span className="font-bold uppercase tracking-widest border-b-2 border-current pb-1 hidden group-hover:inline-block">Read More</span>
+              </div>
+            </div>
+
+            {/* Service 2 */}
+            <div className="p-10 md:p-16 hover-invert group flex flex-col justify-between min-h-[450px]">
+              <div>
+                <h3 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6">02<br/>Creative</h3>
+                <p className="text-lg md:text-xl font-medium opacity-90 group-hover:opacity-100 leading-relaxed">
+                  High-converting visual assets and brutalist digital experiences designed to demand and hold absolute attention.
+                </p>
+              </div>
+              <div className="mt-12">
+                <span className="font-bold uppercase tracking-widest border-b-2 border-current pb-1 hidden group-hover:inline-block">Read More</span>
+              </div>
+            </div>
+
+            {/* Service 3 */}
+            <div className="p-10 md:p-16 hover-invert group flex flex-col justify-between min-h-[450px]">
+              <div>
+                <h3 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6">03<br/>Growth</h3>
+                <p className="text-lg md:text-xl font-medium opacity-90 group-hover:opacity-100 leading-relaxed">
+                  Relentless performance marketing scales. Paid acquisition loops engineered for maximum measurable ROI.
+                </p>
+              </div>
+              <div className="mt-12">
+                <span className="font-bold uppercase tracking-widest border-b-2 border-current pb-1 hidden group-hover:inline-block">Read More</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* Marquee or Bold Statement */}
+        <section className="bg-black text-white p-10 md:p-16 overflow-hidden flex items-center border-y-2 border-black hover-invert hover:border-black cursor-default transition-none">
+           <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter whitespace-nowrap opacity-90">
+            NO EXCUSES. &nbsp;&nbsp; PURE EXECUTION. &nbsp;&nbsp; NO EXCUSES. &nbsp;&nbsp; PURE EXECUTION.
+           </h2>
+        </section>
+
+        {/* Contact/Footer */}
+        <section id="contact" className="p-6 md:p-10 min-h-[60vh] flex flex-col justify-center">
+          <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-16 py-16">
+             <div>
+                <h2 className="text-5xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-10">
+                  Lets Talk<br/>Business.
+                </h2>
+                <a href="mailto:hello@bwstudio.com" className="text-2xl md:text-5xl font-bold link-underline pb-2 inline-block">
+                  hello@bwstudio.com
+                </a>
+             </div>
+             <div className="flex flex-col items-start md:items-end justify-end gap-6 text-xl font-bold uppercase tracking-widest">
+                <a href="#" className="link-underline">Instagram</a>
+                <a href="#" className="link-underline">LinkedIn</a>
+                <a href="#" className="link-underline">Twitter</a>
+             </div>
+          </div>
+          <div className="max-w-7xl mx-auto w-full mt-auto pt-10 border-t-2 border-black flex flex-col md:flex-row justify-between items-center gap-4 font-bold text-sm uppercase tracking-widest">
+            <span>&copy; {new Date().getFullYear()} B&amp;W Studio</span>
+            <span>All rights reserved.</span>
+          </div>
+        </section>
       </main>
     </div>
   );
