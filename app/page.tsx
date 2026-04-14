@@ -66,12 +66,15 @@ export default function Home() {
                  </Link>
               </div>
             </div>
-            {/* Abstract visual */}
-            <div className="hidden md:block relative h-[400px] w-full bg-primary/10 rounded-2xl border border-primary/20 fade-in-up delay-300">
-                <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(var(--primary) 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-primary font-bold text-2xl opacity-50">
-                   [مخططات هندسية]
-                </div>
+            {/* Hero Image */}
+            <div className="hidden md:block relative h-[450px] w-full fade-in-up delay-300">
+                <Image 
+                  src="/paper.webp" 
+                  alt="مخططات هندسية" 
+                  fill
+                  className="object-cover rounded-2xl shadow-lg border border-gray-200"
+                  priority
+                />
             </div>
           </div>
         </section>
