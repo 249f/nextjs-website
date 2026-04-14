@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ProductionLinesService() {
   return (
@@ -29,10 +30,19 @@ export default function ProductionLinesService() {
             </ul>
           </div>
           
-          <div className="h-80 w-full bg-gray-100 rounded-2xl flex flex-col items-center justify-center text-gray-500 border-2 border-dashed border-gray-300 shadow-inner">
-             <span className="text-4xl mb-4">⚙️</span>
-             <span className="font-bold">[مساحة مخصصة لصورة الخدمة]</span>
-             <span className="text-sm mt-2">يمكن وضع صورة لماكينات صناعية أو أذرع آلية هنا.</span>
+          <div className="grid grid-cols-2 gap-4">
+             <div className="relative h-48 w-full rounded-xl overflow-hidden shadow-sm">
+                <Image src="/images/production_lines/5978737632046943518.jpg" alt="Production Line" fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 50vw, 33vw" />
+             </div>
+             <div className="relative h-48 w-full rounded-xl overflow-hidden shadow-sm">
+                <Image src="/images/production_lines/5978737632046943519.jpg" alt="Production Line" fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 50vw, 33vw" />
+             </div>
+             <div className="relative h-48 w-full rounded-xl overflow-hidden shadow-sm">
+                <Image src="/images/production_lines/5978737632046943520.jpg" alt="Production Line" fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 50vw, 33vw" />
+             </div>
+             <div className="relative h-48 w-full rounded-xl overflow-hidden shadow-sm">
+                <Image src="/images/production_lines/5978737632046943521.jpg" alt="Production Line" fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 50vw, 33vw" />
+             </div>
           </div>
         </section>
 
