@@ -76,11 +76,11 @@ export default function Home() {
               src="/paper.webp"
               alt="Background"
               fill
-              className="object-cover opacity-120"
+              className="object-cover opacity-60"
               sizes="100vw"
               priority
             />
-            <div className="absolute inset-0 bg-white/30 backdrop-blur-[2px]"></div>
+            {/* <div className="absolute inset-0 bg-white/30 backdrop-blur-[2px]"></div> */}
           </div>
 
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 w-full">
