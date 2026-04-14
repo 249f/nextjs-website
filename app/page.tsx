@@ -58,34 +58,34 @@ export default function Home() {
                 مؤسسة "حمزة" متخصصة في تقديم الحلول الهندسية المتكاملة في مجالات أنظمة المباني وخطوط الإنتاج. ننهض بمشاريعك بحلول مبتكرة وعملية.
               </p>
               <div className="flex gap-4 fade-in-up delay-200">
-                 <Link href="#contact" className="btn-primary text-lg">
+                <Link href="#contact" className="btn-primary text-lg">
                   استشارة مجانية
-                 </Link>
-                 <Link href="#services" className="px-6 py-3 border-2 border-primary text-primary font-bold rounded-md hover:bg-primary/5 transition-colors text-lg inline-flex items-center justify-center">
+                </Link>
+                <Link href="#services" className="px-6 py-3 border-2 border-primary text-primary font-bold rounded-md hover:bg-primary/5 transition-colors text-lg inline-flex items-center justify-center">
                   تصفح خدماتنا
-                 </Link>
+                </Link>
               </div>
             </div>
             {/* Hero Image */}
             <div className="hidden md:block relative h-[450px] w-full fade-in-up delay-300">
-                <Image 
-                  src="/paper.webp" 
-                  alt="مخططات هندسية" 
-                  fill
-                  className="object-cover rounded-2xl shadow-lg border border-gray-200"
-                  priority
-                />
+              <Image
+                src="/paper.webp"
+                alt="مخططات هندسية"
+                fill
+                className="object-cover rounded-2xl shadow-lg border border-gray-200"
+                priority
+              />
             </div>
           </div>
         </section>
 
         {/* About Us */}
         <section id="about" className="py-16 md:py-24 px-6 md:px-10 max-w-7xl mx-auto text-center">
-            <h2 className="text-sm font-bold text-primary mb-2 uppercase tracking-widest">من نحن</h2>
-            <h3 className="text-3xl md:text-4xl font-bold mb-8">نؤمن أن كل مشكلة هندسية لها حل ذكي</h3>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
-              نحن فريق هندسي بقيادة مهندس ميكانيكي متخصص، نمتلك خبرة واسعة في أنظمة التكييف والتهوية (HVAC)، أنظمة مكافحة الحريق، الأنظمة الصحية، وأنظمة السلامة. مهمتنا هي الوصول للحل بأعلى كفاءة وأقل تكلفة.
-            </p>
+          <h2 className="text-sm font-bold text-primary mb-2 uppercase tracking-widest">من نحن</h2>
+          <h3 className="text-3xl md:text-4xl font-bold mb-8">نؤمن أن كل مشكلة هندسية لها حل ذكي</h3>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6">
+            نحن فريق هندسي بقيادة مهندس ميكانيكي متخصص، نمتلك خبرة واسعة في أنظمة التكييف والتهوية (HVAC)، أنظمة مكافحة الحريق، الأنظمة الصحية، وأنظمة السلامة. مهمتنا هي الوصول للحل بأعلى كفاءة وأقل تكلفة.
+          </p>
         </section>
 
         {/* Services */}
@@ -95,7 +95,7 @@ export default function Home() {
               <h2 className="text-sm font-bold text-primary mb-2 uppercase tracking-widest">خدماتنا</h2>
               <h3 className="text-3xl md:text-4xl font-bold">الحلول الهندسية الشاملة</h3>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white p-8 card-hover shadow-soft border border-gray-100">
                 <div className="w-12 h-12 bg-accent text-primary rounded-lg flex items-center justify-center mb-6 text-2xl">❄️</div>
@@ -146,9 +146,9 @@ export default function Home() {
               <div className="flex flex-col gap-4">
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-1">المساحة (متر مربع):</label>
-                  <input 
-                    type="number" 
-                    value={hvacArea} 
+                  <input
+                    type="number"
+                    value={hvacArea}
                     onChange={(e) => setHvacArea(e.target.value === '' ? '' : Number(e.target.value))}
                     placeholder="مثال: 50"
                     className="w-full border border-gray-300 rounded px-4 py-2 focus:ring-2 focus:ring-primary focus:outline-none bg-white"
@@ -170,9 +170,9 @@ export default function Home() {
               <div className="flex flex-col gap-4">
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-1">المساحة الإجمالية للمكان (متر مربع):</label>
-                  <input 
-                    type="number" 
-                    value={fireArea} 
+                  <input
+                    type="number"
+                    value={fireArea}
                     onChange={(e) => setFireArea(e.target.value === '' ? '' : Number(e.target.value))}
                     placeholder="مثال: 1000"
                     className="w-full border border-gray-300 rounded px-4 py-2 focus:ring-2 focus:ring-primary focus:outline-none bg-white"
@@ -192,39 +192,39 @@ export default function Home() {
         {/* Contact/Footer */}
         <section id="contact" className="py-20 bg-foreground text-white px-6 md:px-10">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
-             <div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">لنتحدث حول مشروعك.</h2>
-                <p className="text-gray-300 text-lg mb-8">
-                  سواء كنت تحتاج لتصميم أنظمة ذكية، حل مشكلة فنية، أو استشارة سريعة، فريقنا الهندسي جاهز لخدمتك.
-                </p>
-                <div className="flex flex-col gap-4">
-                  <a href="mailto:info@hamza-eng.com" className="text-xl font-bold flex items-center gap-3 hover:text-primary transition-colors">
-                    ✉️ info@hamza-eng.com
-                  </a>
-                  <a href="https://wa.me/123456789" className="text-green-400 text-xl font-bold flex items-center gap-3 hover:text-green-300 transition-colors">
-                    💬 تواصل واتساب
-                  </a>
-                </div>
-             </div>
-             
-             {/* Contact Form */}
-             <div className="bg-white/10 p-8 rounded-xl backdrop-blur-sm border border-white/20">
-               <h3 className="text-2xl font-bold mb-6">طلب خدمة</h3>
-               <form className="flex flex-col gap-4 text-gray-800">
-                 <input type="text" placeholder="الاسم" className="w-full bg-white border border-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary" />
-                 <input type="tel" placeholder="رقم الهاتف" className="w-full bg-white border border-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary" />
-                 <select className="w-full bg-white border border-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary">
-                    <option value="">نوع الخدمة...</option>
-                    <option value="mep">تصميم أنظمة MEP</option>
-                    <option value="lines">خطوط الإنتاج</option>
-                    <option value="consult">استشارة هندسية</option>
-                 </select>
-                 <textarea placeholder="تفاصيل الطلب..." rows={4} className="w-full bg-white border border-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary"></textarea>
-                 <button type="button" className="btn-primary mt-2">إرسال الطلب</button>
-               </form>
-             </div>
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">لنتحدث حول مشروعك.</h2>
+              <p className="text-gray-300 text-lg mb-8">
+                سواء كنت تحتاج لتصميم أنظمة ذكية، حل مشكلة فنية، أو استشارة سريعة، فريقنا الهندسي جاهز لخدمتك.
+              </p>
+              <div className="flex flex-col gap-4">
+                <a href="mailto:widaaaltaher121@gmail.com" className="text-xl font-bold flex items-center gap-3 hover:text-primary transition-colors">
+                  ✉️ widaaaltaher121@gmail.com
+                </a>
+                <a href="https://wa.me/+249126994464" className="text-green-400 text-xl font-bold flex items-center gap-3 hover:text-green-300 transition-colors">
+                  💬 تواصل واتساب
+                </a>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="bg-white/10 p-8 rounded-xl backdrop-blur-sm border border-white/20">
+              <h3 className="text-2xl font-bold mb-6">طلب خدمة</h3>
+              <form className="flex flex-col gap-4 text-gray-800">
+                <input type="text" placeholder="الاسم" className="w-full bg-white border border-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary" />
+                <input type="tel" placeholder="رقم الهاتف" className="w-full bg-white border border-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary" />
+                <select className="w-full bg-white border border-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary">
+                  <option value="">نوع الخدمة...</option>
+                  <option value="mep">تصميم أنظمة MEP</option>
+                  <option value="lines">خطوط الإنتاج</option>
+                  <option value="consult">استشارة هندسية</option>
+                </select>
+                <textarea placeholder="تفاصيل الطلب..." rows={4} className="w-full bg-white border border-gray-500 rounded px-4 py-3 focus:outline-none focus:border-primary"></textarea>
+                <button type="button" className="btn-primary mt-2">إرسال الطلب</button>
+              </form>
+            </div>
           </div>
-          
+
           <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
             <span>&copy; {new Date().getFullYear()} مؤسسة حمزة للحلول الهندسية. جميع الحقوق محفوظة.</span>
           </div>
