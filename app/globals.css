@@ -1,90 +1,77 @@
 @import "tailwindcss";
 
 :root {
-  /* Stark, brutalist black and white palette */
-  --background: #000000;
-  --foreground: #ffffff;
+  /* Corporate Blue and Clean White Palette */
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --primary: #1d4ed8; 
+  --primary-hover: #1e3a8a;
+  --accent: #eff6ff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-cairo);
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Base custom utilities */
-.border-brutal {
-  border: 2px solid var(--foreground);
+/* Utilities */
+.shadow-soft {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
 }
 
-.hover-invert {
-  transition: background-color 0.3s ease, color 0.3s ease;
+.card-hover {
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
 }
 
-.hover-invert:hover {
-  background-color: var(--foreground);
-  color: var(--background);
+.card-hover:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-4px);
 }
 
-/* Modern Link Underline */
-.link-underline {
-  position: relative;
-  text-decoration: none;
-  font-weight: 500;
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.link-underline::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: currentColor;
-  transform-origin: bottom right;
-  transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+.btn-primary:hover {
+  background-color: var(--primary-hover);
 }
 
-.link-underline:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-/* Fade In Up Micro-animation */
 .fade-in-up {
   opacity: 0;
   animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.delay-100 {
-  animation-delay: 100ms;
-}
-
-.delay-200 {
-  animation-delay: 200ms;
-}
-
-.delay-300 {
-  animation-delay: 300ms;
-}
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
