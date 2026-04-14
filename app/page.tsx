@@ -5,6 +5,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Home() {
+  // Mobile Menu State
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   // Calculators State
   const [hvacArea, setHvacArea] = useState<number | ''>('');
   const [hvacResult, setHvacResult] = useState<number | null>(null);
@@ -43,22 +46,53 @@ export default function Home() {
         <a href="#contact" className="btn-primary text-sm hidden md:flex">
           اطلب خدمة
         </a>
-        <button className="md:hidden text-primary font-bold">القائمة</button>
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="md:hidden text-primary font-bold p-2 focus:outline-none"
+          aria-label="القائمة"
+        >
+          {isMenuOpen ? "إغلاق" : "القائمة"}
+        </button>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`fixed inset-0 z-40 bg-white transition-transform duration-300 ease-in-out transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden pt-24`}>
+        <div className="flex flex-col items-center gap-8 text-xl font-bold text-gray-800">
+          <Link href="#about" onClick={() => setIsMenuOpen(false)}>من نحن</Link>
+          <Link href="#services" onClick={() => setIsMenuOpen(false)}>خدماتنا</Link>
+          <Link href="#tools" onClick={() => setIsMenuOpen(false)}>أدوات هندسية</Link>
+          <Link href="#portfolio" onClick={() => setIsMenuOpen(false)}>أعمالنا</Link>
+          <Link href="#contact" onClick={() => setIsMenuOpen(false)}>تواصل معنا</Link>
+          <a href="#contact" onClick={() => setIsMenuOpen(false)} className="btn-primary mt-4">اطلب خدمة</a>
+        </div>
+      </div>
 
       <main className="pt-24 md:pt-32">
         {/* Hero Section */}
-        <section className="px-6 md:px-10 py-16 md:py-24 border-b border-gray-100 bg-accent/30 overflow-hidden relative">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
-            <div>
-              <h1 className="text-4xl md:text-6xl font-black text-foreground leading-[1.2] mb-6 fade-in-up">
+        <section className="px-6 md:px-10 py-20 md:py-32 border-b border-gray-100 bg-white overflow-hidden relative min-h-[70vh] flex items-center">
+          {/* Background Image Container - Always absolute on mobile, relative on desktop grid */}
+          <div className="absolute md:hidden inset-0 z-0">
+            <Image
+              src="/paper.webp"
+              alt="Background"
+              fill
+              className="object-cover opacity-120"
+              sizes="100vw"
+              priority
+            />
+            <div className="absolute inset-0 bg-white/30 backdrop-blur-[2px]"></div>
+          </div>
+
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10 w-full">
+            <div className="fade-in-up">
+              <h1 className="text-4xl md:text-6xl font-black text-foreground leading-[1.2] mb-6">
                 حلول هندسية متكاملة لضمان <span className="text-primary">الكفاءة والجودة.</span>
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 mb-8 fade-in-up delay-100 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed max-w-xl">
                 مؤسسة "حمزة" متخصصة في تقديم الحلول الهندسية المتكاملة في مجالات أنظمة المباني وخطوط الإنتاج. ننهض بمشاريعك بحلول مبتكرة وعملية.
               </p>
-              <div className="flex gap-4 fade-in-up delay-200">
-                <Link href="#contact" className="btn-primary text-lg">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="#contact" className="btn-primary text-lg px-8">
                   استشارة مجانية
                 </Link>
                 <Link href="#services" className="px-6 py-3 border-2 border-primary text-primary font-bold rounded-md hover:bg-primary/5 transition-colors text-lg inline-flex items-center justify-center">
@@ -66,13 +100,15 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            {/* Hero Image */}
-            <div className="hidden md:block relative h-[450px] w-full fade-in-up delay-300">
+
+            {/* Desktop Hero Image - Only visible on md+ */}
+            <div className="hidden md:block relative h-[500px] w-full fade-in-up delay-200">
               <Image
                 src="/paper.webp"
                 alt="مخططات هندسية"
                 fill
-                className="object-cover rounded-2xl shadow-lg border border-gray-200"
+                className="object-cover rounded-2xl shadow-xl border border-gray-100"
+                sizes="50vw"
                 priority
               />
             </div>
