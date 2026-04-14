@@ -133,35 +133,50 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-8 card-hover shadow-soft border border-gray-100">
-                <div className="w-12 h-12 bg-accent text-primary rounded-lg flex items-center justify-center mb-6 text-2xl">❄️</div>
-                <h4 className="text-xl font-bold mb-4">تصميم أنظمة MEP</h4>
-                <p className="text-gray-600 mb-4">تصميم أنظمة التكييف والتهوية (HVAC)، مكافحة الحريق (Firefighting)، الأنظمة الصحية، والسلامة.</p>
-              </div>
+              <Link href="/services/mep" className="bg-white p-8 card-hover shadow-soft border border-gray-100 flex flex-col group block">
+                <div className="w-12 h-12 bg-accent text-primary rounded-lg flex items-center justify-center mb-6 text-2xl group-hover:scale-110 transition-transform">❄️</div>
+                <h4 className="text-xl font-bold mb-4 flex items-center justify-between">
+                  تصميم أنظمة MEP
+                  <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:-translate-x-2">←</span>
+                </h4>
+                <p className="text-gray-600 mb-4 flex-grow">تصميم أنظمة التكييف والتهوية (HVAC)، مكافحة الحريق (Firefighting)، الأنظمة الصحية، والسلامة.</p>
+              </Link>
 
-              <div className="bg-white p-8 card-hover shadow-soft border border-gray-100">
-                <div className="w-12 h-12 bg-accent text-primary rounded-lg flex items-center justify-center mb-6 text-2xl">⚙️</div>
-                <h4 className="text-xl font-bold mb-4">خطوط الإنتاج</h4>
-                <p className="text-gray-600 mb-4">تصميم وتطوير خطوط الإنتاج، تحليل الأعطال وإيجاد الحلول الجبرية لتحسين كفاءة التشغيل.</p>
-              </div>
+              <Link href="/services/production-lines" className="bg-white p-8 card-hover shadow-soft border border-gray-100 flex flex-col group block">
+                <div className="w-12 h-12 bg-accent text-primary rounded-lg flex items-center justify-center mb-6 text-2xl group-hover:scale-110 transition-transform">⚙️</div>
+                <h4 className="text-xl font-bold mb-4 flex items-center justify-between">
+                  خطوط الإنتاج
+                  <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:-translate-x-2">←</span>
+                </h4>
+                <p className="text-gray-600 mb-4 flex-grow">تصميم وتطوير خطوط الإنتاج، تحليل الأعطال وإيجاد الحلول الجبرية لتحسين كفاءة التشغيل.</p>
+              </Link>
 
-              <div className="bg-white p-8 card-hover shadow-soft border border-gray-100">
-                <div className="w-12 h-12 bg-accent text-primary rounded-lg flex items-center justify-center mb-6 text-2xl">🧩</div>
-                <h4 className="text-xl font-bold mb-4">تصميم أجزاء مخصصة</h4>
-                <p className="text-gray-600 mb-4">تصميم قطع ميكانيكية حسب الطلب وتعديل تصميمات قائمة لحل مشاكل فنية.</p>
-              </div>
+              <Link href="/services/custom-parts" className="bg-white p-8 card-hover shadow-soft border border-gray-100 flex flex-col group block">
+                <div className="w-12 h-12 bg-accent text-primary rounded-lg flex items-center justify-center mb-6 text-2xl group-hover:scale-110 transition-transform">🧩</div>
+                <h4 className="text-xl font-bold mb-4 flex items-center justify-between">
+                  تصميم أجزاء مخصصة
+                  <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:-translate-x-2">←</span>
+                </h4>
+                <p className="text-gray-600 mb-4 flex-grow">تصميم قطع ميكانيكية حسب الطلب وتعديل تصميمات قائمة لحل مشاكل فنية.</p>
+              </Link>
 
-              <div className="bg-white p-8 card-hover shadow-soft border border-gray-100">
-                <div className="w-12 h-12 bg-accent text-primary rounded-lg flex items-center justify-center mb-6 text-2xl">🧠</div>
-                <h4 className="text-xl font-bold mb-4">الاستشارات الهندسية</h4>
-                <p className="text-gray-600 mb-4">مراجعة التصميمات بدقة، تقديم حلول فنية للمشاكل الهندسية ودعم المشاريع بالخبرات.</p>
-              </div>
+              <Link href="/services/consulting" className="bg-white p-8 card-hover shadow-soft border border-gray-100 flex flex-col group block">
+                <div className="w-12 h-12 bg-accent text-primary rounded-lg flex items-center justify-center mb-6 text-2xl group-hover:scale-110 transition-transform">🧠</div>
+                <h4 className="text-xl font-bold mb-4 flex items-center justify-between">
+                  الاستشارات الهندسية
+                  <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:-translate-x-2">←</span>
+                </h4>
+                <p className="text-gray-600 mb-4 flex-grow">مراجعة التصميمات بدقة، تقديم حلول فنية للمشاكل الهندسية ودعم المشاريع بالخبرات.</p>
+              </Link>
 
-              <div className="bg-white p-8 card-hover shadow-soft border border-gray-100">
-                <div className="w-12 h-12 bg-accent text-primary rounded-lg flex items-center justify-center mb-6 text-2xl">🛠️</div>
-                <h4 className="text-xl font-bold mb-4">الصيانة والتشغيل</h4>
-                <p className="text-gray-600 mb-4">تشخيص الأعطال المعقدة عن بعد، دعم فني مباشر فعال، ومتابعة تشغيل الأنظمة.</p>
-              </div>
+              <Link href="/services/online-maintenance" className="bg-white p-8 card-hover shadow-soft border border-gray-100 flex flex-col group block">
+                <div className="w-12 h-12 bg-accent text-primary rounded-lg flex items-center justify-center mb-6 text-2xl group-hover:scale-110 transition-transform">🛠️</div>
+                <h4 className="text-xl font-bold mb-4 flex items-center justify-between">
+                  الصيانة والتشغيل
+                  <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:-translate-x-2">←</span>
+                </h4>
+                <p className="text-gray-600 mb-4 flex-grow">تشخيص الأعطال المعقدة عن بعد، دعم فني مباشر فعال، ومتابعة تشغيل الأنظمة.</p>
+              </Link>
             </div>
           </div>
         </section>
