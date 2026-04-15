@@ -16,37 +16,59 @@ export default function ConsultingService() {
             </p>
         </header>
 
-        <section className="max-w-5xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h2 className="text-2xl font-bold mb-6 border-r-4 border-primary pr-4">تفاصيل الخدمة</h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              نجاح المشاريع الهندسية يبدأ باتخاذ القرارات الصحيحة. نوفر استشارات هندسية شاملة لمراجعة التصميمات، تقييم المخاطر، واقتراح الحلول الأمثل لتلافي الأخطاء وتقليل التكاليف الإجمالية للمشروع.
-            </p>
-            <ul className="list-disc list-inside text-gray-700 space-y-3 font-semibold">
-               <li>مراجعة التصميمات والمخططات الهندسية بدقة</li>
-               <li>تقديم حلول فنية متطورة للمشاكل المستعصية</li>
-               <li>دعم المشاريع الكبرى بالخبرات والإشراف الموجه</li>
-               <li>دراسة الجدوى الفنية واختيار أفضل المعدات</li>
-            </ul>
-          </div>
-          
-          <div className="grid grid-cols-2 gap-4">
-             <div className="relative h-48 w-full rounded-xl overflow-hidden shadow-sm">
-                <Image src="/images/engineering_consultancy/5978737632046943530.jpg" alt="Consultancy" fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 50vw, 33vw" />
-             </div>
-             <div className="relative h-48 w-full rounded-xl overflow-hidden shadow-sm">
-                <Image src="/images/engineering_consultancy/5978737632046943531.jpg" alt="Consultancy" fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 50vw, 33vw" />
-             </div>
-             <div className="relative h-48 w-full rounded-xl overflow-hidden shadow-sm">
-                <Image src="/images/engineering_consultancy/5978737632046943532.jpg" alt="Consultancy" fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 50vw, 33vw" />
-             </div>
-             <div className="relative h-48 w-full rounded-xl overflow-hidden shadow-sm">
-                <Image src="/images/engineering_consultancy/5978737632046943533.jpg" alt="Consultancy" fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 50vw, 33vw" />
-             </div>
-          </div>
+        {/* Feature 1 */}
+        <section className="flex flex-col md:flex-row gap-10 items-center py-20 px-6 max-w-7xl mx-auto border-b border-gray-100">
+           <div className="w-full md:w-1/2">
+             <h3 className="text-3xl font-bold mb-6 border-r-4 border-primary pr-4">المراجعة والتدقيق الفني للمخططات</h3>
+             <p className="text-xl text-gray-700 leading-relaxed">
+               تدارك الأخطاء على الورق يوفر آلاف الدولارات في موقع العمل. يقوم خبراؤنا بالتدقيق المعمق في الرسومات الهندسية، وحسابات الأحمال، ومخططات التنفيذ لضمان خلوها من أي تعارض ميكانيكي وكهربي ولمطابقتها مع الأكواد القياسية.
+             </p>
+           </div>
+           <div className="w-full md:w-1/2 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+             <Image src="/images/engineering_consultancy/5978737632046943530.jpg" alt="Technical Review" fill className="object-cover hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 50vw" />
+           </div>
         </section>
 
-        <div className="text-center pb-24">
+        {/* Feature 2: Reversed */}
+        <section className="flex flex-col md:flex-row-reverse gap-10 items-center py-20 px-6 max-w-7xl mx-auto border-b border-gray-100 bg-gray-50/50">
+           <div className="w-full md:w-1/2">
+             <h3 className="text-3xl font-bold mb-6 border-r-4 border-primary pr-4">الإشراف على مشاريع البنية التحتية</h3>
+             <p className="text-xl text-gray-700 leading-relaxed">
+               الجودة ليست مجرد توصيات بل متابعة يومية بالموقع. نقدم إشرافاً دقيقاً على مقاولي التنفيذ للتأكد من استخدام المواد المحددة سلفاً في كراسة الشروط وتركيبها بأسلوب هندسي صحيح يضمن الأمان وطول عمر النظام في المشاريع الحساسة.
+             </p>
+           </div>
+           <div className="w-full md:w-1/2 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+             <Image src="/images/engineering_consultancy/5978737632046943531.jpg" alt="Project Supervision" fill className="object-cover hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 50vw" />
+           </div>
+        </section>
+
+        {/* Feature 3 */}
+        <section className="flex flex-col md:flex-row gap-10 items-center py-20 px-6 max-w-7xl mx-auto border-b border-gray-100">
+           <div className="w-full md:w-1/2">
+             <h3 className="text-3xl font-bold mb-6 border-r-4 border-primary pr-4">دراسات الجدوى الفنية وتقييم المخاطر</h3>
+             <p className="text-xl text-gray-700 leading-relaxed">
+               قبل ضخ استثمارات رأسمالية كبيرة في إضاءة منشأة، خط إنتاج، أو تكنولوجيا صناعية مستجدة، نقدم دراسة جدوى فنية عميقة. نحلل قدرات المعدات مقارنة باحتياجات السوق الحقيقية ونلخص لك دراسة العائد التقني على المدى الطويل (ROI).
+             </p>
+           </div>
+           <div className="w-full md:w-1/2 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+             <Image src="/images/engineering_consultancy/5978737632046943532.jpg" alt="Feasibility Studies" fill className="object-cover hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 50vw" />
+           </div>
+        </section>
+
+        {/* Feature 4: Reversed */}
+        <section className="flex flex-col md:flex-row-reverse gap-10 items-center py-20 px-6 max-w-7xl mx-auto border-b border-gray-100 bg-gray-50/50">
+           <div className="w-full md:w-1/2">
+             <h3 className="text-3xl font-bold mb-6 border-r-4 border-primary pr-4">هندسة القيمة لخفض التكاليف (Value Engineering)</h3>
+             <p className="text-xl text-gray-700 leading-relaxed">
+               نعيد تقييم التصميمات لتحقيق نفس الأهداف الوظيفية والجمالية والجودة ولكن بتكلفة أقل. عن طريق استبدال المواد الباهظة أو الاستغناء عن الأجزاء التي لا تقدم فائدة حقيقية للمستخدم النهائي، نوفر ميزانيات ضخمة لعملائنا.
+             </p>
+           </div>
+           <div className="w-full md:w-1/2 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+             <Image src="/images/engineering_consultancy/5978737632046943533.jpg" alt="Value Engineering" fill className="object-cover hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 50vw" />
+           </div>
+        </section>
+
+        <div className="text-center py-24 bg-white">
            <Link href="/#contact" className="btn-primary text-xl px-10 py-4 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all inline-block">
              احجز موعد استشارة
            </Link>
