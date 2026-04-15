@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   description: "خبراء في تقديم الحلول الهندسية المتكاملة في مجال أنظمة المباني وخطوط الإنتاج.",
 };
 
+import { Analytics } from "@vercel/analytics/next";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,6 +23,7 @@ export default function RootLayout({
     <html lang="ar" dir="rtl" className={`${cairo.variable}`}>
       <body className="min-h-screen flex flex-col font-sans bg-background text-foreground antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );
