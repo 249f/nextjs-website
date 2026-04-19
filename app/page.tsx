@@ -250,7 +250,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col gap-4">
                 <a href="mailto:widaaaltaher121@gmail.com" className="text-xl font-bold flex items-center gap-3 hover:text-primary transition-colors">
-                  ✉️ widaaaltaher121@gmail.com
+                  ✉️ hamzaelzain2000@gmail.com
                 </a>
                 <a href="https://wa.me/+249126994464" className="text-green-400 text-xl font-bold flex items-center gap-3 hover:text-green-300 transition-colors">
                   💬 تواصل واتساب
